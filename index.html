@@ -598,9 +598,90 @@
           height: 32px;
         }
       }
+
+      /* Page Loader (modal) */
+      .page-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(10, 14, 39, 1);
+        z-index: 9999;
+        transition: opacity 400ms ease, transform 400ms ease;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        will-change: opacity, transform;
+      }
+
+      .page-loader.hide {
+        opacity: 0;
+        transform: scale(0.98);
+        pointer-events: none;
+      }
+
+      .loader-inner {
+        text-align: center;
+        color: #fff;
+        font-family: "Courier New", monospace;
+      }
+      .spinner {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 5px solid rgba(255, 255, 255, 0.12);
+        border-top-color: var(--neon-pink);
+        animation: spin 1s linear infinite;
+        margin: 0 auto 12px;
+      }
+      .loader-text {
+        color: var(--neon-cyan);
+        letter-spacing: 2px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Prevent scrolling and hide page content while loader is active (smooth fade-in on finish) */
+      body.loading {
+        overflow: hidden !important;
+        height: 100vh !important;
+        touch-action: none;
+      }
+
+      /* Ensure children can transition visibly */
+      body > *:not(#page-loader) {
+        transition: opacity 400ms ease, transform 400ms ease, filter 400ms ease;
+      }
+
+      body.loading > *:not(#page-loader) {
+        opacity: 0 !important;
+        transform: translateY(8px) !important;
+        filter: blur(2px) !important;
+        pointer-events: none !important;
+        user-select: none !important;
+      }
     </style>
   </head>
   <body>
+    <!-- Modal Page Loader -->
+    <div
+      id="page-loader"
+      class="page-loader"
+      aria-hidden="false"
+      role="status"
+      aria-label="Loading"
+    >
+      <div class="loader-inner" aria-hidden="true">
+        <div class="spinner" aria-hidden="true"></div>
+        <div class="loader-text">Loading...</div>
+      </div>
+    </div>
+
     <div class="grid-bg"></div>
     <div class="scanlines"></div>
 
@@ -947,6 +1028,43 @@
           console.log("🚫 DevTools shortcut disabled");
         }
       });
+
+      // Page loader: ensure minimum display time and make it modal
+      (function () {
+        const loader = document.getElementById("page-loader");
+        const LOADER_MIN_MS = 1000; // minimum visible time (1s)
+        const TRANS_MS = 420; // match CSS timing
+        const shownAt = Date.now();
+
+        // Mark page as loading immediately
+        if (document.body) document.body.classList.add("loading");
+
+        function removeLoader() {
+          if (!loader) return;
+          loader.classList.add("hide");
+          // restore page after transition
+          setTimeout(() => {
+            if (document.body) document.body.classList.remove("loading");
+            if (loader && loader.parentNode)
+              loader.parentNode.removeChild(loader);
+          }, TRANS_MS);
+        }
+
+        function hideWhenReady() {
+          const elapsed = Date.now() - shownAt;
+          const remaining = LOADER_MIN_MS - elapsed;
+          if (remaining > 0) setTimeout(removeLoader, remaining);
+          else removeLoader();
+        }
+
+        window.addEventListener("load", hideWhenReady);
+        // Fallback (shorter)
+        setTimeout(hideWhenReady, 5000);
+
+        // Optional: one-time click to dismiss
+        loader &&
+          loader.addEventListener("click", hideWhenReady, { once: true });
+      })();
 
       // Obfuscate console
       console.log(
