@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Hilmy Hafizh</title>
-    <link
-      rel="shortcut icon"
-      href="favicon porto transparan.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="FaviconPortfolio.png" type="image/x-icon" />
     <style>
       * {
         margin: 0;
@@ -241,6 +237,7 @@
         gap: 2.5rem;
         max-width: 1000px;
         margin: 0 auto;
+        align-items: stretch;
       }
 
       .skill-card {
@@ -251,6 +248,10 @@
         position: relative;
         transition: all 0.3s;
         clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
       }
 
       .skill-card:hover {
@@ -687,7 +688,7 @@
 
     <header>
       <h1 class="glitch-text">Hilmy Hafizh</h1>
-      <p class="subtitle">[ CREATIVE DEVELOPER ]</p>
+      <p class="subtitle">[ JUNIOR WEB DEVELOPER ]</p>
     </header>
 
     <nav>
@@ -711,20 +712,19 @@
           <div class="terminal-content">
             <p><span>$</span> whoami</p>
             <p>
-              Seorang developer kreatif yang passionate dalam menciptakan
-              pengalaman digital yang memorable dan unik.
+              I am interested in and currently developing my skills in web and
+              Android development. At the moment, I focus on learning Laravel
+              for web applications and React Native for Android through small
+              projects and self-practice.
             </p>
             <br />
             <p><span>$</span> cat passions.txt</p>
-            <p>
-              • Web Development dengan pendekatan modern<br />• UI/UX Design
-              yang anti-mainstream<br />• Creative Coding & Interactive
-              Experiences<br />• Always learning & experimenting
-            </p>
+            <p>• Web Development<br />• Android Development</p>
             <br />
             <p>
-              <span>$</span> echo "Mission: Bringing digital dreams to life with
-              code and creativity"
+              <span>$</span> echo "Mission: I am open to learning new things,
+              receiving feedback, and continuously improving my skills through
+              hands-on practice and work experience."
             </p>
           </div>
         </div>
@@ -734,35 +734,37 @@
         <h2 class="section-title">&gt; SKILL_MATRIX.dat</h2>
         <div class="skills-grid">
           <div class="skill-card">
-            <div class="skill-icon">🎨</div>
-            <h3 class="skill-name">Frontend Dev</h3>
-            <p>HTML, CSS, JavaScript, React</p>
+            <div class="skill-icon">🌐</div>
+            <h3 class="skill-name">Web Development</h3>
+            <p>Laravel, PHP, HTML, CSS, JavaScript</p>
+            <br />
+            <small
+              >Currently learning & practicing through small projects</small
+            >
             <div class="skill-level">
-              <div class="skill-progress" style="width: 90%"></div>
+              <div class="skill-progress" style="width: 70%"></div>
             </div>
           </div>
+
           <div class="skill-card">
-            <div class="skill-icon">⚡</div>
-            <h3 class="skill-name">Performance</h3>
-            <p>Optimization & Speed</p>
+            <div class="skill-icon">📱</div>
+            <h3 class="skill-name">Android Development</h3>
+            <p>React Native, Expo, Typescript</p>
+            <br />
+            <small>Building simple apps for self-practice</small>
             <div class="skill-level">
-              <div class="skill-progress" style="width: 85%"></div>
+              <div class="skill-progress" style="width: 65%"></div>
             </div>
           </div>
+
           <div class="skill-card">
-            <div class="skill-icon">🎯</div>
-            <h3 class="skill-name">UI/UX Design</h3>
-            <p>Figma, User Research</p>
+            <div class="skill-icon">🛠️</div>
+            <h3 class="skill-name">Basic Backend & Tools</h3>
+            <p>Supabase, Postgres, Git, Github, MySQL, Firebase</p>
+            <br />
+            <small>Understanding fundamentals & workflows</small>
             <div class="skill-level">
-              <div class="skill-progress" style="width: 80%"></div>
-            </div>
-          </div>
-          <div class="skill-card">
-            <div class="skill-icon">🚀</div>
-            <h3 class="skill-name">Backend</h3>
-            <p>Node.js, APIs, Database</p>
-            <div class="skill-level">
-              <div class="skill-progress" style="width: 75%"></div>
+              <div class="skill-progress" style="width: 60%"></div>
             </div>
           </div>
         </div>
@@ -773,7 +775,7 @@
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-img">
-              <img src="icon512.png" alt="PengaduanApp" />
+              <img src="PengaduanApp512.png" alt="PengaduanApp" />
             </div>
             <div class="project-content">
               <h3 class="project-title">PengaduanApp</h3>
@@ -791,10 +793,7 @@
           </div>
           <div class="project-card">
             <div class="project-img">
-              <img
-                src="icon512 certificate icon.png"
-                alt="Software Development"
-              />
+              <img src="Certificate512.png" alt="Software Development" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Software Development</h3>
@@ -812,10 +811,7 @@
           </div>
           <div class="project-card">
             <div class="project-img">
-              <img
-                src="icon512 certificate icon.png"
-                alt="TOEFL Prediction Test"
-              />
+              <img src="Certificate512.png" alt="TOEFL Prediction Test" />
             </div>
             <div class="project-content">
               <h3 class="project-title">TOEFL Prediction Test</h3>
@@ -884,7 +880,7 @@
       </p>
       <div class="social-links">
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=0&to=hilmyhafizh938@gmail.com&su=Hello!&body=Hi,%20I%20found%20your%20portfolio..."
+          href="https://mail.google.com/mail/?view=cm&to=hilmyhafizh938@gmail.com"
           target="_blank"
           class="social-link"
           title="Email"
@@ -908,7 +904,7 @@
           </svg>
         </a>
         <a
-          href="https://linkedin.com/in/hilmy-hafizh-09857723b"
+          href="https://linkedin.com/in/hilmy-hafizh-04a0493a2"
           target="_blank"
           class="social-link"
           title="LinkedIn"
@@ -920,7 +916,7 @@
           </svg>
         </a>
         <a
-          href="https://wa.me/62895413355050?text=Hi!%20Saya%20tertarik%20dengan%20portfolio%20kamu.%20Boleh%20diskusi%3F"
+          href="https://wa.me/62895413355050"
           target="_blank"
           class="social-link"
           title="WhatsApp"
@@ -932,9 +928,7 @@
           </svg>
         </a>
       </div>
-      <p style="margin-top: 2rem; color: #666">
-        © 2025 - Portofolio - Hilmy Hafizh
-      </p>
+      <p style="margin-top: 2rem; color: #666">© 2025 - Hilmy Hafizh</p>
     </footer>
 
     <script>
