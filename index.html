@@ -227,16 +227,7 @@
             pointer-events: none;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(45, 230, 192, 0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
+
 
         .hero-tag {
             font-family: var(--mono);
@@ -660,50 +651,49 @@
             top: 4px;
         }
 
-        /* CERTS */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.25rem;
-        }
 
-        .cert-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 1.5rem;
+
+        /* CERTS - Minimalist List Style */
+        .cert-list {
             display: flex;
-            gap: 1rem;
-            align-items: flex-start;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .cert-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 6px;
-            background: rgba(124, 108, 250, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 16px;
+        .cert-item {
+            position: relative;
+            padding-left: 1.5rem;
+            transition: transform 0.2s ease;
         }
 
-        .cert-body {}
+        .cert-item:hover {
+            transform: translateX(5px);
+        }
+
+        .cert-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: var(--mono);
+            font-size: 14px;
+            top: 2px;
+        }
 
         .cert-title {
-            font-size: 0.875rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: var(--text);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.25rem;
             line-height: 1.4;
         }
 
         .cert-sub {
             font-family: var(--mono);
-            font-size: 10px;
+            font-size: 11px;
             color: var(--muted);
-            letter-spacing: 0.06em;
+            letter-spacing: 0.04em;
+            line-height: 1.6;
         }
 
         /* CONTACT */
@@ -759,18 +749,17 @@
         }
 
         .contact-gpa {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 2rem;
+            padding-left: 3rem;
+            border-left: 1px solid var(--border);
         }
 
         .gpa-num {
-            font-size: 4rem;
+            font-size: 5.5rem;
             font-weight: 800;
             color: var(--accent);
-            line-height: 1;
-            margin-bottom: 0.5rem;
+            line-height: 0.8;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.04em;
         }
 
         .gpa-label {
@@ -977,7 +966,7 @@
         </div>
         <div class="hero-stats">
             <div>
-                <span class="stat-num">3</span>
+                <span class="stat-num">4</span>
                 <span class="stat-label">LIVE APPS</span>
             </div>
             <div>
@@ -1049,7 +1038,6 @@
 
     <div class="full-divider"></div>
 
-    <!-- SKILLS -->
     <section id="skills" class="reveal">
         <p class="section-label">SKILLS</p>
         <h2 class="section-title">Tech Stack</h2>
@@ -1067,12 +1055,22 @@
             <div class="skill-group">
                 <div class="skill-group-title">FRAMEWORKS &amp; LIBRARIES</div>
                 <div class="skill-tags">
+                    <span class="tag accent">Next.js</span>
                     <span class="tag accent">React</span>
                     <span class="tag accent">React Native (Expo)</span>
                     <span class="tag">Laravel</span>
                     <span class="tag">Node.js</span>
                     <span class="tag">TanStack Query</span>
                     <span class="tag">Zustand</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <div class="skill-group-title">AI &amp; AUTOMATION</div>
+                <div class="skill-tags">
+                    <span class="tag accent">Groq AI</span>
+                    <span class="tag accent">LLaMA 3.3</span>
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">Prompt Engineering</span>
                 </div>
             </div>
             <div class="skill-group">
@@ -1089,6 +1087,8 @@
                 <div class="skill-group-title">TOOLS &amp; PLATFORMS</div>
                 <div class="skill-tags">
                     <span class="tag">Git / GitHub</span>
+                    <span class="tag teal">Vercel</span>
+                    <span class="tag">Cloudflare Pages</span>
                     <span class="tag">PWA / Workbox</span>
                     <span class="tag">Tailwind CSS</span>
                     <span class="tag">Canva</span>
@@ -1184,6 +1184,27 @@
                     aria-label="View QuranApp Digital live demo">Live Demo</a>
             </div>
 
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-name">Resume Analyzer</div>
+                    <span class="project-year">2026</span>
+                </div>
+                <span class="project-badge">AI-POWERED TOOL</span>
+                <p class="project-desc">
+                    AI-driven resume analysis tool providing ATS compatibility scores, section-by-section reviews,
+                    keyword analysis, and rewrite suggestions in seconds.
+                </p>
+                <div class="project-stack">
+                    <span class="tag accent">Next.js 16</span>
+                    <span class="tag accent">TypeScript</span>
+                    <span class="tag">Groq AI</span>
+                    <span class="tag teal">LLaMA 3.3</span>
+                    <span class="tag">Vanilla CSS</span>
+                </div>
+                <a href="https://resume-analyzer-three-theta.vercel.app/" target="_blank" class="project-link"
+                    aria-label="View Resume Analyzer live demo">Live Demo</a>
+            </div>
+
         </div>
     </section>
 
@@ -1229,20 +1250,14 @@
         <!-- CERTS -->
         <div style="margin-top: 3rem;">
             <p class="section-label">CERTIFICATIONS</p>
-            <div class="cert-grid" style="margin-top: 1.5rem;">
-                <div class="cert-card">
-                    <div class="cert-icon">🏆</div>
-                    <div class="cert-body">
-                        <div class="cert-title">BNSP — Certificate of Competence in Software Development</div>
-                        <div class="cert-sub">Program Analyst · No. 62010 2514 0005582 2025 · Valid 3 Years</div>
-                    </div>
+            <div class="cert-list" style="margin-top: 1.5rem;">
+                <div class="cert-item">
+                    <div class="cert-title">BNSP — Certificate of Competence in Software Development</div>
+                    <div class="cert-sub">Program Analyst · No. 62010 2514 0005582 2025 · Valid 3 Years</div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🌐</div>
-                    <div class="cert-body">
-                        <div class="cert-title">BNSP — Certificate of Competence in Computer Network</div>
-                        <div class="cert-sub">Intermediate Network Admin · No. 61100 2522 5 0002274 2026 · Valid 3 Years
-                        </div>
+                <div class="cert-item">
+                    <div class="cert-title">BNSP — Certificate of Competence in Computer Network</div>
+                    <div class="cert-sub">Intermediate Network Admin · No. 61100 2522 5 0002274 2026 · Valid 3 Years
                     </div>
                 </div>
             </div>
@@ -1369,4 +1384,3 @@
 </body>
 
 </html>
-<!-- Deployment trigger -->
