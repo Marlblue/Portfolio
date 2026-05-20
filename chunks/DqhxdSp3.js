@@ -1,1 +1,0 @@
-const e=[{title:"PengaduanApp",slug:"pengaduanapp",description:"Public complaint management app"},{title:"CineHub",slug:"cinehub",description:"Full-featured movie discovery app"},{title:"Quran PWA",slug:"quranpwa",description:"Offline-first Quran PWA"},{title:"Resume Analyzer",slug:"resumeanalyzer",description:"AI-driven resume analysis tool"}];export{e as default};
