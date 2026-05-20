@@ -45,6 +45,7 @@ export default defineConfig({
   ssgOptions: {
     script: "async",
     formatting: "minify",
+    dirStyle: "nested",
     includedRoutes() {
       return [
         "/",
