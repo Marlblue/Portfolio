@@ -21,11 +21,14 @@ import { useHead } from "@unhead/vue";
 import { t } from "../../../i18n/utils/translate";
 
 useHead({
-  title: computed(() => `Hilmy Hafizh | ${t("job-title")}`),
+  title: computed(() => {
+    const jobTitle = t("job-title");
+    return jobTitle ? `Hilmy Hafizh | ${jobTitle}` : "Hilmy Hafizh | Full-Stack Developer";
+  }),
   meta: [
     {
       name: "description",
-      content: computed(() => t("about-tagline")),
+      content: computed(() => t("about-tagline") || "Full-Stack Developer & Mobile Engineer specializing in React Native and Modern Web Tech."),
     },
   ],
 });
