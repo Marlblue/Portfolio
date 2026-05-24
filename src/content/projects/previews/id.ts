@@ -2,10 +2,17 @@ import thumbnailPengaduanApp from "../../../assets/thumbnails/pengaduanapp.png";
 import thumbnailCineHub from "../../../assets/thumbnails/cinehub.png";
 import thumbnailQuranPWA from "../../../assets/thumbnails/quranpwa.png";
 import thumbnailResumeAnalyzer from "../../../assets/thumbnails/resumeanalyzer.png";
+import thumbnailWargaCheck from "../../../assets/thumbnails/wargacheck.png";
 
 import type { ProjectPreview } from "../../types";
 
 export default [
+  {
+    title: "WargaCheck",
+    slug: "wargacheck",
+    thumbnail: thumbnailWargaCheck,
+    description: "Aplikasi WargaCheck",
+  },
   {
     title: "PengaduanApp",
     slug: "pengaduanapp",

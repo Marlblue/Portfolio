@@ -18,7 +18,10 @@ export type TagVariant =
   | "expo"
   | "workbox"
   | "tailwind"
-  | "pwa";
+  | "pwa"
+  | "typescript"
+  | "vite"
+  | "gemini";
 
 export const tagLabels = {
   three: "Three.js",
@@ -41,4 +44,7 @@ export const tagLabels = {
   workbox: "Workbox",
   tailwind: "Tailwind CSS",
   pwa: "PWA",
+  typescript: "TypeScript",
+  vite: "Vite",
+  gemini: "Gemini",
 } as const satisfies Record<TagVariant, string>;
