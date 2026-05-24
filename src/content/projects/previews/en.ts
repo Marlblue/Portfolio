@@ -11,7 +11,7 @@ export default [
     title: "WargaCheck",
     slug: "wargacheck",
     thumbnail: thumbnailWargaCheck,
-    description: "WargaCheck application",
+    description: "AI-powered civil document assistant",
   },
   {
     title: "PengaduanApp",
