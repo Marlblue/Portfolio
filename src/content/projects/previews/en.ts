@@ -1,7 +1,7 @@
 import thumbnailPengaduanApp from "../../../assets/thumbnails/pengaduanapp.png";
 import thumbnailCineHub from "../../../assets/thumbnails/cinehub.png";
-import thumbnailQuranPWA from "../../../assets/thumbnails/quranpwa.png";
-import thumbnailResumeAnalyzer from "../../../assets/thumbnails/resumeanalyzer.png";
+import thumbnailQuranPWA from "../../../assets/thumbnails/quranapp.png";
+import thumbnailResumeAnalyzer from "../../../assets/thumbnails/resume.png";
 import thumbnailWargaCheck from "../../../assets/thumbnails/wargacheck.png";
 
 import type { ProjectPreview } from "../../types";
