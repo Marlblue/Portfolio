@@ -91,6 +91,56 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #95630e;
       color: white;
     }
+
+    &-reactnative {
+      background-color: #61dafb;
+      color: #0f2e36;
+    }
+
+    &-supabase {
+      background-color: #3fcf8e;
+      color: #0a2e1e;
+    }
+
+    &-expo {
+      background-color: #000020;
+      color: white;
+    }
+
+    &-workbox {
+      background-color: #f5a623;
+      color: #3a2500;
+    }
+
+    &-tailwind {
+      background-color: #38b2ac;
+      color: white;
+    }
+
+    &-pwa {
+      background-color: #5a0fc8;
+      color: white;
+    }
+
+    &-typescript {
+      background-color: #3178c6;
+      color: white;
+    }
+
+    &-vite {
+      background-color: #646cff;
+      color: white;
+    }
+
+    &-gemini {
+      background-color: #4285f4;
+      color: white;
+    }
+
+    &-framermotion {
+      background-color: #ff0055;
+      color: white;
+    }
   }
 }
 </style>

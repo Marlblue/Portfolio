@@ -21,7 +21,8 @@ export type TagVariant =
   | "pwa"
   | "typescript"
   | "vite"
-  | "gemini";
+  | "gemini"
+  | "framermotion";
 
 export const tagLabels = {
   three: "Three.js",
@@ -47,4 +48,5 @@ export const tagLabels = {
   typescript: "TypeScript",
   vite: "Vite",
   gemini: "Gemini",
+  framermotion: "Framer Motion",
 } as const satisfies Record<TagVariant, string>;

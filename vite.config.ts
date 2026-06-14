@@ -49,10 +49,13 @@ export default defineConfig({
     includedRoutes() {
       return [
         "/",
+        "/project/wargacheck",
         "/project/pengaduanapp",
         "/project/cinehub",
         "/project/quranpwa",
         "/project/resumeanalyzer",
+        "/project/weddinginvitation",
+        "/project/nathanmerch",
       ];
     },
   },

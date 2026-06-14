@@ -5,5 +5,5 @@ export default {
   theme: "light",
   tags: ["react", "tailwind"],
   live: "https://marlblue-cinehub.netlify.app",
-  description: "Full-featured movie discovery app with debounced search, infinite scroll, trailer playback, and watchlist functionality — API key secured via Netlify serverless proxy.",
+  description: "Aplikasi pencarian film lengkap dengan fitur pencarian debounced, infinite scroll, pemutaran trailer, dan watchlist — API key diamankan menggunakan proxy serverless Netlify.",
 } as const satisfies ProjectContent;

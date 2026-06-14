@@ -5,5 +5,5 @@ export default {
   theme: "light",
   tags: ["next", "tailwind", "react"],
   live: "https://resume-analyzer-three-theta.vercel.app/",
-  description: "AI-driven resume analysis tool providing ATS compatibility scores, section-by-section reviews, keyword analysis, and rewrite suggestions in seconds.",
+  description: "Alat analisis resume berbasis AI yang memberikan skor kompatibilitas ATS, ulasan per bagian, analisis kata kunci, dan saran penulisan ulang dalam hitungan detik.",
 } as const satisfies ProjectContent;

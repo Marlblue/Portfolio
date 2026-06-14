@@ -3,6 +3,8 @@ import thumbnailCineHub from "../../../assets/thumbnails/cinehub.png";
 import thumbnailQuranPWA from "../../../assets/thumbnails/quranapp.png";
 import thumbnailResumeAnalyzer from "../../../assets/thumbnails/resume.png";
 import thumbnailWargaCheck from "../../../assets/thumbnails/wargacheck.png";
+import thumbnailWeddingInvitation from "../../../assets/thumbnails/weddinginvitation.png";
+import thumbnailNathanMerch from "../../../assets/thumbnails/nathanmerch.png";
 
 import type { ProjectPreview } from "../../types";
 
@@ -36,5 +38,17 @@ export default [
     slug: "resumeanalyzer",
     thumbnail: thumbnailResumeAnalyzer,
     description: "AI-driven resume analysis tool",
+  },
+  {
+    title: "Wedding Invitation",
+    slug: "weddinginvitation",
+    thumbnail: thumbnailWeddingInvitation,
+    description: "Animated digital wedding invitation",
+  },
+  {
+    title: "NathanMerch.id",
+    slug: "nathanmerch",
+    thumbnail: thumbnailNathanMerch,
+    description: "Custom merchandise e-catalog website",
   },
 ] as const satisfies ProjectPreview[];
