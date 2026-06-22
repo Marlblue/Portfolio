@@ -56,7 +56,9 @@ html {
 .children-unclickable {
   pointer-events: all;
 
-  * {
-    pointer-events: none;
+  @media (hover: hover) and (pointer: fine) {
+    * {
+      pointer-events: none;
+    }
   }
 }
