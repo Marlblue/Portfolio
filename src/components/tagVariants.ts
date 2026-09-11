@@ -22,7 +22,9 @@ export type TagVariant =
   | "typescript"
   | "vite"
   | "gemini"
-  | "framermotion";
+  | "framermotion"
+  | "sanity"
+  | "midtrans";
 
 export const tagLabels = {
   three: "Three.js",
@@ -49,4 +51,6 @@ export const tagLabels = {
   vite: "Vite",
   gemini: "Gemini",
   framermotion: "Framer Motion",
+  sanity: "Sanity",
+  midtrans: "Midtrans",
 } as const satisfies Record<TagVariant, string>;

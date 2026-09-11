@@ -1,3 +1,5 @@
+import thumbnailSdbi from "../../../assets/thumbnails/sdbi.png";
+import thumbnailKalihSignature from "../../../assets/thumbnails/kalihsignature.png";
 import thumbnailPengaduanApp from "../../../assets/thumbnails/pengaduanapp.png";
 import thumbnailCineHub from "../../../assets/thumbnails/cinehub.png";
 import thumbnailQuranPWA from "../../../assets/thumbnails/quranapp.png";
@@ -9,6 +11,18 @@ import thumbnailNathanMerch from "../../../assets/thumbnails/nathanmerch.png";
 import type { ProjectPreview } from "../../types";
 
 export default [
+  {
+    title: "Sekolah Digital Bisnis",
+    slug: "sdbi",
+    thumbnail: thumbnailSdbi,
+    description: "Platform e-course & operasional bootcamp",
+  },
+  {
+    title: "Kalih Signature",
+    slug: "kalihsignature",
+    thumbnail: thumbnailKalihSignature,
+    description: "Website cafe, working space & meeting room",
+  },
   {
     title: "WargaCheck",
     slug: "wargacheck",

@@ -49,6 +49,8 @@ export default defineConfig({
     includedRoutes() {
       return [
         "/",
+        "/project/sdbi",
+        "/project/kalihsignature",
         "/project/wargacheck",
         "/project/pengaduanapp",
         "/project/cinehub",

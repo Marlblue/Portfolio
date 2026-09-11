@@ -141,6 +141,16 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #ff0055;
       color: white;
     }
+
+    &-sanity {
+      background-color: #f03e2f;
+      color: white;
+    }
+
+    &-midtrans {
+      background-color: #0060af;
+      color: white;
+    }
   }
 }
 </style>
